@@ -1,5 +1,6 @@
 require_relative 'word_type_comparer'
 require_relative 'word_generator'
+require_relative 'similar_words_finder'
 
 class WordExercise
   def initialize(sentence)
@@ -8,11 +9,12 @@ class WordExercise
 
     @type_comparer = WordTypeComparer.new(word, 'empty')
     @word_generator = WordGenerator.new
+    @similar_words_finder = SimilarWordsFinder.new(word)
   end
 
   def generate_next_word
-    puts @type_comparer.is_a_name?
     puts @word_generator.pick_random_verb
+    puts @similar_words_finder.has_a_synonym?
   end
 
   def display_sentence
@@ -20,5 +22,5 @@ class WordExercise
   end
 end
 
-exercise = WordExercise.new('I ran with JD')
+exercise = WordExercise.new('I ran with JD who is tall')
 exercise.generate_next_word
