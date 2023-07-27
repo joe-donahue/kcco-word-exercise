@@ -1,62 +1,24 @@
 require_relative 'word_type_comparer'
+require_relative 'word_generator'
 
 class WordExercise
   def initialize(sentence)
     @sentence = sentence
     word = @sentence.split(' ').last
 
-    @noun_comparer = WordTypeComparer.new(word, 'noun')
-    @adjective_comparer = WordTypeComparer.new(word, 'adjective')
-    @adverb_comparer = WordTypeComparer.new(word, 'adverb')
-    @interjection_comparer = WordTypeComparer.new(word, 'interjection')
-    @verb_comparer = WordTypeComparer.new(word, 'verb')
+    @type_comparer = WordTypeComparer.new(word, 'empty')
+    @word_generator = WordGenerator.new
   end
 
   def generate_next_word
-
+    puts @type_comparer.is_a_verb?
+    puts @word_generator.pick_random_verb
   end
 
   def display_sentence
 
   end
-
-  def is_a_noun?
-    @noun_comparer.is_type?
-  end
-
-  def is_a_adjective?
-    @adjective_comparer.is_type?
-  end
-
-  def is_a_adverb?
-    @adverb_comparer.is_type?
-  end
-
-  def is_a_interjection?
-    @interjection_comparer.is_type?
-  end
-
-  def is_a_verb?
-    @verb_comparer.is_type?
-  end
-
-  def pick_random_noun
-    @noun_comparer.pick_random_word_from_type
-  end
-
-  def pick_random_adjective
-    @adjective_comparer.pick_random_word_from_type
-  end
-
-  def pick_random_adverb
-    @adverb_comparer.pick_random_word_from_type
-  end
-
-  def pick_random_interjection
-    @interjection_comparer.pick_random_word_from_type
-  end
-
-  def pick_random_verb
-    @verb_comparer.pick_random_word_from_type
-  end
 end
+
+exercise = WordExercise.new('I ran')
+exercise.generate_next_word
