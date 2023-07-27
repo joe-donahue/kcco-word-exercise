@@ -32,4 +32,8 @@ class WordTypeComparer
   def is_a_verb?
     is_type?('verb')
   end
+
+  def is_a_name?
+    is_type?('name')
+  end
 end

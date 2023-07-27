@@ -11,7 +11,7 @@ class WordExercise
   end
 
   def generate_next_word
-    puts @type_comparer.is_a_verb?
+    puts @type_comparer.is_a_name?
     puts @word_generator.pick_random_verb
   end
 
@@ -20,5 +20,5 @@ class WordExercise
   end
 end
 
-exercise = WordExercise.new('I ran')
+exercise = WordExercise.new('I ran with JD')
 exercise.generate_next_word
