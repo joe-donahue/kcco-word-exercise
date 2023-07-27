@@ -7,6 +7,7 @@ class WordExercise
 
     @noun_comparer = WordTypeComparer.new(word, 'noun')
     @adjective_comparer = WordTypeComparer.new(word, 'adjective')
+    @adverb_comparer = WordTypeComparer.new(word, 'adverb')
   end
 
   def generate_next_word
@@ -25,11 +26,19 @@ class WordExercise
     @adjective_comparer.is_type?
   end
 
+  def is_a_adverb?
+    @adverb_comparer.is_type?
+  end
+
   def pick_random_noun
     @noun_comparer.pick_random_word_from_type
   end
 
   def pick_random_adjective
     @adjective_comparer.pick_random_word_from_type
+  end
+
+  def pick_random_adverb
+    @adverb_comparer.pick_random_word_from_type
   end
 end
