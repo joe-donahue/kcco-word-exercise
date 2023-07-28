@@ -33,4 +33,8 @@ class WordGenerator
   def pick_random_verb
     pick_random_word_from_type('verb')
   end
+
+  def pick_random_definitive_article
+    pick_random_word_from_type('definitive_article')
+  end
 end

@@ -13,8 +13,8 @@ class WordExercise
   end
 
   def generate_next_word
-    puts @similar_words_finder.has_a_antonym?
-    puts @similar_words_finder.pick_random_antonym
+    puts @type_comparer.is_a_definitive_article?
+    puts @word_generator.pick_random_definitive_article
   end
 
   def display_sentence
@@ -22,5 +22,5 @@ class WordExercise
   end
 end
 
-exercise = WordExercise.new('I ran with JD who is tall')
+exercise = WordExercise.new('I ran with JD who is a')
 exercise.generate_next_word

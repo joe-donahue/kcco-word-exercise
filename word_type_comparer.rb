@@ -36,4 +36,8 @@ class WordTypeComparer
   def is_a_name?
     is_type?('name')
   end
+
+  def is_a_definitive_article?
+    is_type?('definitive_article')
+  end
 end

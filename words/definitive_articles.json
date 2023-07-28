@@ -1,0 +1,11 @@
+{
+  "description": "A list of definitive articles.",
+  "definitive_articles":
+    [ "the",
+      "The",
+      "a",
+      "A",
+      "an",
+      "An"
+    ]
+}
