@@ -13,14 +13,24 @@ class WordExercise
   end
 
   def generate_next_word
-    puts @type_comparer.is_a_conjunction?
-    puts @word_generator.pick_random_conjunction
+    # Implement logic to generate the next word in the sentence and return it.
+
+    'I am returning this because I have not been implemented yet and no one loves me.'
+  end
+
+  def add_next_word_to_sentence(next_word)
+    @sentence = "#{@sentence} #{next_word}"
   end
 
   def display_sentence
-
+    puts @sentence
   end
 end
 
-exercise = WordExercise.new('I ran with JD who is a person but')
-exercise.generate_next_word
+exercise = WordExercise.new('--- current sentence goes here ---')
+next_word = exercise.generate_next_word
+
+puts "The next word is: #{next_word}"
+
+exercise.add_next_word_to_sentence(next_word)
+exercise.display_sentence
