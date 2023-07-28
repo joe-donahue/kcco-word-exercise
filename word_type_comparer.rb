@@ -40,4 +40,8 @@ class WordTypeComparer
   def is_a_definitive_article?
     is_type?('definitive_article')
   end
+
+  def is_a_conjunction?
+    is_type?('conjunction')
+  end
 end

@@ -13,8 +13,8 @@ class WordExercise
   end
 
   def generate_next_word
-    puts @type_comparer.is_a_definitive_article?
-    puts @word_generator.pick_random_definitive_article
+    puts @type_comparer.is_a_conjunction?
+    puts @word_generator.pick_random_conjunction
   end
 
   def display_sentence
@@ -22,5 +22,5 @@ class WordExercise
   end
 end
 
-exercise = WordExercise.new('I ran with JD who is a')
+exercise = WordExercise.new('I ran with JD who is a person but')
 exercise.generate_next_word
