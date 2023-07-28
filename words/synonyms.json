@@ -1,4 +1,4 @@
 {
-  "bright": "dark",
-  "tall": "short"
+  "bright": ["shining","light","brilliant","dazzling","glowing","sparkling"],
+  "tall": ["big","high","large","towering"]
 }
