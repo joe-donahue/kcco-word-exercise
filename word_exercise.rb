@@ -13,8 +13,8 @@ class WordExercise
   end
 
   def generate_next_word
-    puts @similar_words_finder.has_a_synonym?
-    puts @similar_words_finder.pick_random_synonym
+    puts @similar_words_finder.has_a_antonym?
+    puts @similar_words_finder.pick_random_antonym
   end
 
   def display_sentence
