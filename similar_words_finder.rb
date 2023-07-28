@@ -9,4 +9,8 @@ class SimilarWordsFinder
 
     @data.key?(@word)
   end
+
+  def pick_random_synonym
+    @data[@word].sample
+  end
 end
